@@ -2,8 +2,29 @@
 <html>
 <head>
 	<title></title>
+	<!-- Angular -->
+	<script src="static/js/angular/angular.js" charset="utf-8"></script>
+	<script src="static/js/angular-route/angular-route.js" charset="utf-8"></script>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Materialize -->
+	<link rel="stylesheet" type="text/css" href="static/css/materialize.css">
+	<script src="static/js/materialize.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/html" href="static/fonts/roboto/">
+
+	<!-- Custom files -->
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 </head>
 <body>
-
+<div class="row">
+	<div class="col s6">
+		<p class="flow-text">Flowing</p>
+	</div>
+	<div class="col s6">
+		<p class="flow-text">Texting</p>
+	</div>
+</div>
+<div ng-view=""></div>
 </body>
 </html>

@@ -1,0 +1,23 @@
+{
+  "name": "RD-Website",
+  "homepage": "https://github.com/FunkyGeorge/RD-Website",
+  "authors": [
+    "George Miranda <george92miranda@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "materialize": "^0.97.8"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
