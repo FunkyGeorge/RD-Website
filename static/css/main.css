@@ -4,3 +4,35 @@ html {
 	margin: 0px;
 	padding: 0px;
 }
+
+nav {
+	height: 20%;
+	margin-bottom: 2em;
+}
+
+#Logo {
+	width: 6em;
+}
+
+#Logo-box {
+	padding: 1em;
+	max-height: 10em;
+}
+
+.menu-item {
+	text-decoration: underline;
+	color: white;
+}
+
+.navbar-item {
+	display: inline-block;
+	padding: 20px 5px 5px 5px;
+}
+
+.tech-column {
+	text-align: center;
+}
+
+.tech-logo {
+	max-width: 7em;
+}

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
-	<title></title>
-	<!-- Angular -->
+	<title>RONIN Dev</title>
+	<!-- Angular Components-->
 	<script src="static/js/angular/angular.js" charset="utf-8"></script>
 	<script src="static/js/angular-route/angular-route.js" charset="utf-8"></script>
 
@@ -12,19 +12,34 @@
 	<link rel="stylesheet" type="text/css" href="static/css/materialize.css">
 	<script src="static/js/materialize.js" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/html" href="static/fonts/roboto/">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- Custom files -->
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+
+	<script src="assets/config/routes.js"></script>
 </head>
 <body>
-<div class="row">
-	<div class="col s6">
-		<p class="flow-text">Flowing</p>
+<nav class="black">
+	<div class="row">
+		<div class="col s6">
+			<div id="Logo-box">
+				<img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!">
+			</div>
+		</div>
+		<div class="col s6">
+			<ul>
+				<li class="navbar-item"><a class="menu-item" href="#/">Our Team</a></li>
+				<li class="navbar-item"><a class="menu-item" href="#/ronindev_portfolio">Our Clients</a></li>
+				<li class="navbar-item"><a class="menu-item" href="#/ronindev_stacks">Our Technologies</a></li>
+				<li class="navbar-item"><a class="menu-item" href="#/ronindev_contact">Let's Talk</a></li>
+			</ul>
+		</div>
 	</div>
-	<div class="col s6">
-		<p class="flow-text">Texting</p>
-	</div>
-</div>
+</nav>
+
+<!-- Partial zone -->
 <div ng-view=""></div>
+
 </body>
 </html>
