@@ -5,7 +5,7 @@ app.config(function ($routeProvider) {
 		templateUrl: 'partials/index.html'
 	})
 	.when('/ronindev_stacks',{
-		templateUrl: 'partials/ronindev_contact.html'
+		templateUrl: 'partials/ronindev_stacks.html'
 	})
 	.when('/ronindev_portfolio',{
 		templateUrl: 'partials/ronindev_portfolio.html'
