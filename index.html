@@ -18,6 +18,18 @@
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 
 	<script src="assets/config/routes.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.card').hover(
+				function(){
+					$(this).children().children('.activator').click();
+				}, function(){
+					$(this).children().children('.card-title').click();
+				}
+			);
+		});
+	</script>
 </head>
 <body>
 <nav class="black">
