@@ -3,6 +3,8 @@
 <head>
 	<title>RONIN Dev</title>
 	<meta charset="utf-8">
+	<link rel="favicon" href="static/img/favicon.ico">
+
 	<!-- Angular Components-->
 	<script src="static/js/angular/angular.js" charset="utf-8"></script>
 	<script src="static/js/angular-route/angular-route.js" charset="utf-8"></script>
@@ -20,38 +22,30 @@
 	<script src="assets/config/routes.js"></script>
 
 	<!-- ################## SEO stuff ######################### -->
-		<meta property="og:title" content="RONIN Dev"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://www.ronindev.world/"/>
-		<meta property="og:site_name" content="RONIN Dev"/>
+	<meta property="og:title" content="RONIN Dev - Professional Website Services"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://www.ronindev.world/"/>
+	<meta property="og:site_name" content="RONIN Dev"/>
+	<meta property="og:image" content="static/img/logos/white_logo_color_background.jpg">
 
- 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-            
-		<meta name="fb_admins_meta_tag" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<!-- <meta name="fb_admins_meta_tag" content=""/> -->
 
-		<!-- search info -->
-		<meta name="keywords" content=""/>
-		<meta name="description" content=""/>
-		<meta property="og:description" content=""/>
+	<!-- search info -->
+	<meta name="keywords" content="Ronin,Web,Application,Applications,Mobile,App,iOS,Swift,Development,Software,SV,Developer,Dev,Programmer,Website,iPhone,Startup,Tech,Yelp,George,Miranda,Elliot,Young,Phil,Vo,Sonny,Tosco,Army ,Veterans,UC Davis,USMA"/>
+	<meta name="description" content=""/>
+	<meta property="og:description" content=""/>
 
-		<!-- .ico files for icons -->
-		<link rel="shortcut icon" href="" type="image/x-icon"/>
-		<link rel="apple-touch-icon" href="" type="image/x-icon"/>
-
-		<meta http-equiv="X-Wix-Renderer-Server" content="app201.vae.aws"/>
-		<meta http-equiv="X-Wix-Meta-Site-Id" content="dd420511-659b-4f82-996a-48da25d1a123"/>
-		<meta http-equiv="X-Wix-Application-Instance-Id" content="35d11b58-3db0-4549-98ad-96a58bdde6f8"/>
-		<meta http-equiv="X-Wix-Published-Version" content="197"/>
-		<meta http-equiv="etag" content="5708c6989ff421fc8dfec7c1dfa43aec"/>
-		
-		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-
-		<meta id="wixMobileViewport" name="viewport" content="minimum-scale=0.25, maximum-scale=1.2"/>
+	<!-- .ico files for icons -->
+	<link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon"/>
+	<link rel="apple-touch-icon" href="static/img/favicon.ico" type="image/x-icon"/>
 
 	<!-- ###################################################### -->
-
-	<script type="text/javascript">
-		$(document).ready(function(){
+<script type="text/javascript">
+	$(document).ready(function(){
+		setInterval(function(){
+			$('.card').off();
+			$('#contact').off();
 			$('.card').hover(
 				function(){
 					$(this).children().children('.activator').click();
@@ -59,8 +53,28 @@
 					$(this).children().children('.card-title').click();
 				}
 			);
-		});
-	</script>
+
+			$('#contact').submit(function(){
+				var name = $('#name').val();
+				var callback = $('#email').val();
+				var project = $('#project').val();
+
+				if (callback.length > 0 && name.length > 0 && project > 0){
+					var email = "methodicalj0kr@live.com";
+					var subject = name + " wants to talk about their project";
+					var body = "Hello Ronin Dev Team,\n\n " +
+					"I would like to have a project built, " +
+					project +
+					"\n\nThank You,\n" + `${name}\n` + callback;
+					document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
+				}
+			});
+
+		}, 500);
+
+	});
+</script>
+	
 </head>
 <body>
 <nav class="black">

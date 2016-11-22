@@ -1,6 +1,6 @@
 html {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	margin: 0px;
 	padding: 0px;
 }
@@ -15,16 +15,17 @@ nav {
 }
 
 .clear-background {
-	opacity: 0.3;
+	opacity: 0.7;
 }
 
 #Logo {
-	width: 6em;
+	width: 5em;
+	margin-top: -45px;
 }
 
 #Logo-box {
-	padding: 1em;
-	max-height: 10em;
+	padding: 3em;
+	max-height: 5em;
 }
 
 .menu-item {
