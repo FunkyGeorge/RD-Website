@@ -43,60 +43,226 @@
 	<!-- ###################################################### -->
 <script type="text/javascript">
 	$(document).ready(function(){
-		setInterval(function(){
-			$('.card').off();
-			$('#contact').off();
-			$('.card').hover(
-				function(){
-					$(this).children().children('.activator').click();
-				}, function(){
-					$(this).children().children('.card-title').click();
-				}
-			);
+		$('.card').off();
+		$('#contact').off();
+		$('.card').hover(
+			function(){
+				$(this).children().children('.activator').click();
+			}, function(){
+				$(this).children().children('.card-title').click();
+			}
+		);
 
-			$('#contact').submit(function(){
-				var name = $('#name').val();
-				var callback = $('#email').val();
-				var project = $('#project').val();
+		$('#contact').submit(function(){
+			var name = $('#name').val();
+			var callback = $('#email').val();
+			var project = $('#project').val();
 
-				if (callback.length > 0 && name.length > 0 && project.length > 0){
-					var email = "methodicalj0kr@live.com";
-					var subject = name + " wants to talk about their project";
-					var body = "Hello Ronin Dev Team,\n\n " +
-					"I would like to have a project built, " +
-					project +
-					"\n\nThank You,\n" + `${name}\n` + callback;
-					document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
-				}
-			});
-
-		}, 500);
+			if (callback.length > 0 && name.length > 0 && project.length > 0){
+				var email = "methodicalj0kr@live.com";
+				var subject = name + " wants to talk about their project";
+				var body = "Hello Ronin Dev Team,\n\n " +
+				"I would like to have a project built, " +
+				project +
+				"\n\nThank You,\n" + `${name}\n` + callback;
+				document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
+			}
+		});
 
 	});
 </script>
 	
 </head>
 <body>
-<nav class="black">
-	<div class="row">
-		<div class="col s6">
-			<div id="Logo-box">
-				<img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!">
+<nav class="nav-extended black">
+<div class="nav-wrapper">
+	<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"></a>
+	
+	<ul class="tabs tabs-transparent">
+		<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
+		<li class="tab right"><a href="#ronindev_stacks">Our Tech</a></li>
+		<li class="tab right"><a href="#ronindev_portfolio">Our Clients</a></li>
+		<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
+	</ul>
+</div>
+</nav>
+<div id="ronindev_index" class="col s12">
+<div class="row">
+	<div class="col s6 m6 l3">
+		<div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="static/img/sonny_resized.png">
+			</div>
+			<div class="card-reveal black-text black clear-background">
+				<span class="card-title text-darken-4 white-text">Sonny Tosco</span>
+				<h6 class="white-text">Role: Product Guy</h6>
+				<div class="spacer"></div>
+				<h6 class="white-text">College</h6>
+				<img class="college" src="static/img/misc/usma.png">
+				<h5 class="white-text">Follow Me</h5>
+				<a href="https://www.linkedin.com/in/sonnytosco" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+				<a href="https://github.com/SonnyTosco" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+				<a href="http://Sonnytosco.com" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
 			</div>
 		</div>
-		<div class="col s6">
-			<ul>
-				<li class="navbar-item"><a class="menu-item" href="#/">Our Team</a></li>
-				<li class="navbar-item"><a class="menu-item" href="#/ronindev_portfolio">Our Clients</a></li>
-				<li class="navbar-item"><a class="menu-item" href="#/ronindev_stacks">Our Tech</a></li>
-				<li class="navbar-item"><a class="menu-item" href="#/ronindev_contact">Let's Talk</a></li>
-			</ul>
+	</div>
+
+	<div class="col s6 m6 l3">
+		<div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="static/img/phil_resized.png">
+			</div>
+			<div class="card-reveal black-text black clear-background">
+				<span class="card-title text-darken-4 white-text">Phil Vo</span>
+				<h6 class="white-text">Role: Back End Boss</h6>
+				<div class="spacer"></div>
+				<h6 class="white-text">College</h6>
+				<img class="college" src="static/img/misc/davis.png">
+				<h5 class="white-text">Follow Me</h5>
+				<a href="https://www.linkedin.com/in/philipvo" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+				<a href="https://github.com/PhilipVo" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+				<a href="http://philipvo.github.io" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+			</div>
 		</div>
 	</div>
-</nav>
 
-<!-- Partial zone -->
-<div ng-view=""></div>
+	<div class="col s6 m6 l3">
+		<div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="static/img/elliot_resized.png">
+			</div>
+			<div class="card-reveal black-text black clear-background">
+				<span class="card-title text-darken-4 white-text">Elliot Young</span>
+				<h6 class="white-text">Role: Back-Door Boss</h6>
+				<div class="spacer"></div>
+				<h6 class="white-text">College</h6>
+				<img class="college" src="static/img/misc/davis.png">
+				<h5 class="white-text">Follow Me</h5>
+				<a href="https://www.linkedin.com/in/elliot-young-5768199a" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+				<a href="https://github.com/elliotsyoung" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+				<a href="" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col s6 m6 l3">
+		<div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="static/img/george_resized.png">
+			</div>
+			<div class="card-reveal black-text black clear-background">
+				<span class="card-title text-darken-4 white-text">George Miranda</span>
+				<h6 class="white-text">Role: Funkmaster of Front-End</h6>
+				<div class="spacer"></div>
+				<h6 class="white-text">College</h6>
+				<img class="college" src="static/img/misc/mjc.png">
+				<h5 class="white-text">Follow Me</h5>
+				<a href="https://www.linkedin.com/in/george-miranda-462a47114" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+				<a href="https://github.com/FunkyGeorge" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+				<a href="http://Aboutgeorge.net" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div id="ronindev_portfolio" class="col s12">
+	<div class="container">
+		<!-- Portfolio Row -->
+		<div class="row">
+			<div class="col l3">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+			<div class="col l3 offset-l1">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+			<div class="col l3 offset-l1">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l3">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+			<div class="col l3 offset-l1">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+			<div class="col l3 offset-l1">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ronindev_stacks" class="col s12">T
+	<div class="row">
+		<div class="col s12 m12 l3 tech-column">
+			<h4 class="Trivial">Languages</h4>
+			<img class="tech-logo" src="static/img/technologies/html5.png">
+			<img class="tech-logo" src="static/img/technologies/python.png">
+			<img class="tech-logo" src="static/img/technologies/swiftlogo.png">
+		</div>
+		<div class="col s12 m12 l3 tech-column">
+			<h4 class="Trivial">Front-End</h4>
+			<img class="tech-logo" src="static/img/technologies/materialize.png">
+			<img class="tech-logo" src="static/img/technologies/react.png">
+			<img class="tech-logo" src="static/img/technologies/jQuery.png">
+			<img class="tech-logo" src="static/img/technologies/angular.png">
+			<img class="tech-logo" src="static/img/technologies/jslogo.png">
+		</div>
+		<div class="col s12 m12 l3 tech-column">
+			<h4 class="Trivial">Back-End</h4>
+			<img class="tech-logo" src="static/img/technologies/aws.png">
+			<img class="tech-logo" src="static/img/technologies/meanlogo.png">
+			<img class="tech-logo" src="static/img/technologies/mongologo.png">
+			<img class="tech-logo" src="static/img/technologies/nginx.png">
+			<img class="tech-logo" src="static/img/technologies/mysql.png">
+			<img class="tech-logo" src="static/img/technologies/nodelogo.png">
+		</div>
+		<div class="col s12 m12 l3 tech-column">
+			<h4 class="Trivial">Frameworks</h4>
+			<img class="tech-logo" src="static/img/technologies/flask.png">
+			<img class="tech-logo" src="static/img/technologies/angular.png">
+		</div>
+	</div>
+</div>
+<div id="ronindev_contact" class="col s12">
+	<div class="container">
+<h1 class="Trivial">Here is where we start</h1>
+	<div class="row">
+		<div class="col s12 m7 l7">
+			<p class="flow-text">Bulding an app is like building a house, it all starts with a blueprint. We'll discuss your vision and develop a wireframe.  That way we can both see what will be built before we start the fun part.</p>
+			<p class="flow-text">After the wireframe is approved we start building.  We will meet once a week to discuss what has been completed and what will be completed in the next week that way you are informed and have oversight throughout the process.</p>
+			<p class="flow-text">Last, we will test your application before it is ready to ship!  Let's start wireframing by getting in touch with us on your right.</p>
+		</div>
+		<div class="col s12 m5 l5">
+			<div class="row">
+				<form class="col s12" id="contact">
+					<div class="row">
+				<div class="input-field col s8">
+					<input id="name" type="text" class="validate">
+					<label for="name">Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s8">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s8">
+					<textarea id="project" class="validate materialize-textarea" length="250"></textarea>
+					<label for="project">Project Description</label>
+				</div>
+			</div>
+			<button class="btn waves-effect waves-light" type="submit" name="action">Send
+				<i class="material-icons right">send</i>
+			</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
 
 </body>
 </html>
