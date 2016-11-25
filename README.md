@@ -4,11 +4,11 @@ Ronin Dev Site
 Index
 //Add copy at the top like a title 
 //Copy: Web and Mobile App Dev Team
-level the text so all of the labels and titles fall along the same line
-align all of the text to the bottom
+//level the text so all of the labels and titles fall along the same line
+//align all of the text to the bottom
 //make the logos and social icons smaller
 //delete the word college
-place the college logo on top of the name
+//place the college logo on top of the name
 place equal distance between
 Portfolio
 add the URLs to the various logos

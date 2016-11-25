@@ -53,9 +53,14 @@ nav {
 	width: 7em;
 }
 
+.college-box {
+	display: block;
+	min-height: 7.5em;
+}
+
 .spacer {
 	display: block;
-	height: 3em;
+	height: 2em;
 }
 
 .menu-item {
