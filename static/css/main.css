@@ -29,6 +29,12 @@ nav {
 	opacity: 0.5;
 }
 
+#Copy {
+	position: relative;
+	top: -15px;
+	left: 15px;
+}
+
 #Logo {
 	width: 1em;
 }
@@ -39,8 +45,8 @@ nav {
 }
 
 .icon {
-	width: 2em;
-	height: 2em;
+	width: 1.5em;
+	height: 1.5em;
 }
 
 .college {
@@ -68,6 +74,10 @@ nav {
 
 .tech-logo {
 	max-width: 9em;
+}
+
+.tech-logo2 {
+	max-width: 5em;
 }
 
 .Trivial{
