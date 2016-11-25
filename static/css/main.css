@@ -26,7 +26,11 @@ nav {
 }
 
 .clear-background {
-	opacity: 0.5;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.non-transparent{
+	opacity: 1.0;
 }
 
 #Copy {
@@ -50,12 +54,16 @@ nav {
 }
 
 .college {
-	width: 7em;
+	width: 4em;
+}
+
+#modestojc-box{
+	width: 6em;
 }
 
 .college-box {
 	display: block;
-	min-height: 7.5em;
+	min-height: 4.5em;
 }
 
 .spacer {
@@ -65,7 +73,7 @@ nav {
 
 .menu-item {
 	text-decoration: underline;
-	color: white;
+	color: black;
 }
 
 .navbar-item {
@@ -87,4 +95,8 @@ nav {
 
 .Trivial{
 	font-family: Trivial;
+}
+
+.portfolio-card{
+	height: 20em;
 }
