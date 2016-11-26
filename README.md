@@ -36,8 +36,8 @@ add icons to the left of the paragraphs as if they’re bullets
 //make the header smaller so it’s on one line
 
 
-make text on index page and portfolio page solid instead of transparent
+// make text on index page and portfolio page solid instead of transparent
 
-make containers for the portfolio projects all the same size
+//make containers for the portfolio projects all the same size
 
-Move title of portfolio project to below 
+//Move title of portfolio project to below

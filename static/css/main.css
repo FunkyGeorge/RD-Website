@@ -104,3 +104,21 @@ nav {
 .padded-image{
 	padding: 20px;
 }
+
+.contact-icon{
+	margin-top: 3em;
+	max-width: 6em;
+}
+
+#rocketship-icon{
+	margin-top: 1em;
+}
+
+.image-or-paragraph-div{
+	min-height: 15em;
+	vertical-align: middle;
+}
+
+.contact-paragraph{
+	font-size: 20px;
+}
