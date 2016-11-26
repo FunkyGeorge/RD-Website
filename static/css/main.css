@@ -98,5 +98,9 @@ nav {
 }
 
 .portfolio-card{
-	height: 20em;
+	height: 21em;
+}
+
+.padded-image{
+	padding: 20px;
 }
