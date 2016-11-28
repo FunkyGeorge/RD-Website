@@ -48,6 +48,10 @@ nav {
 	max-height: 5em;
 }
 
+#Footer-icons li {
+	display: inline;
+}
+
 .icon {
 	width: 1.5em;
 	height: 1.5em;
