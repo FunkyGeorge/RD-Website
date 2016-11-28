@@ -106,12 +106,16 @@ nav {
 }
 
 .contact-icon{
-	margin-top: 3em;
-	max-width: 6em;
+	display: inline-block;
 }
-
+#codeicon{
+		max-width: 8em;
+	}
+#blueprinticon{
+		max-width: 8em;
+	}
 #rocketship-icon{
-	margin-top: 1em;
+	max-width: 8em;
 }
 
 .image-or-paragraph-div{
@@ -121,4 +125,10 @@ nav {
 
 .contact-paragraph{
 	font-size: 20px;
+	display: inline-block;
+}
+
+.contact-icon-and-text{
+	vertical-align: middle;
+	display: inline-block;
 }
