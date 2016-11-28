@@ -38,56 +38,56 @@
 	<!-- ###################################################### -->
 	<!-- Google Tag Manager -->
 	<script>
-		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-N6DKCC6');
-	</script>
-	<!-- End Google Tag Manager -->
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$('.card').hover(
-			function(){
-				$(this).children().children('.activator').click();
-			}, function(){
-				$(this).children().children('.card-title').click();
-			}
-		);
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N6DKCC6');
+</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.card').hover(
+		function(){
+			$(this).children().children('.activator').click();
+		}, function(){
+			$(this).children().children('.card-title').click();
+		}
+	);
 
-		$('#contact').submit(function(){
-			var name = $('#name').val();
-			var callback = $('#email').val();
-			var project = $('#project').val();
+	$('#contact').submit(function(){
+		var name = $('#name').val();
+		var callback = $('#email').val();
+		var project = $('#project').val();
 
-			if (callback.length > 0 && name.length > 0 && project.length > 0){
-				var email = "";   //Enter Email Here
-				var subject = name + " wants to talk about their project";
-				var body = "Hello Ronin Dev Team,\n\n " +
-				"I would like to have a project built, " +
-				project +
-				"\n\nThank You,\n" + `${name}\n` + callback;
-				document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
-			}
-		});
-
+		if (callback.length > 0 && name.length > 0 && project.length > 0){
+			var email = "";   //Enter Email Here
+			var subject = name + " wants to talk about their project";
+			var body = "Hello Ronin Dev Team,\n\n " +
+			"I would like to have a project built, " +
+			project +
+			"\n\nThank You,\n" + `${name}\n` + callback;
+			document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
+		}
 	});
-	</script>
+
+});
+</script>
 
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6DKCC6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6DKCC6"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 
 	<!-- Navbar -->
 	<nav class="nav-extended black">
 		<div class="nav-wrapper">
-			<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="hide-on-med-and-down">Web and Mobile App Development Team</span></a>
+			<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="hide-on-med-and-down Lato">Web and Mobile App Dev Team</span></a>
 
 			<ul class="tabs tabs-transparent black-text">
 				<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
@@ -99,6 +99,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</nav>
 	<!-- index partial -->
 	<div id="ronindev_index" class="col s12">
+		<h2 class="Trivial center-align">Our Team</h2>
+		<h5 class="Lato center-align">We are a full stack development team for hire</h5>
 		<div class="row">
 			<div class="col s6 m6 l3">
 				<div class="card">
@@ -151,7 +153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 							<img class="college" src="static/img/misc/davis.png">
 						</div>
 						<h5 class="">Elliot Young</h5>
-						<h6 class="">Role: Back-Door Boss</h6>
+						<h6 class="">Role: Front-End Engineer</h6>
 						<div class="spacer"></div>
 						<h6 class="">Follow Me</h6>
 						<a href="https://www.linkedin.com/in/elliot-young-5768199a" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
@@ -171,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 							<img id="modestojc-box" src="static/img/misc/mjc.png">
 						</div>
 						<h5 class="">George Miranda</h5>
-						<h6 class="">Role: Funkmaster of Front-End</h6>
+						<h6 class="">Role: Front-End Funkmaster</h6>
 						<div class="spacer"></div>
 						<h6 class="">Follow Me</h6>
 						<a href="https://www.linkedin.com/in/george-miranda-462a47114" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
@@ -185,9 +187,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	<!-- Portfolio partial -->
 	<div id="ronindev_portfolio" class="col s12">
 		<!-- Portfolio Row -->
+		<h2 class="Trivial center-align">Our Clients</h2>
+		<h5 class="Lato center-align">Here are some applications we've built</h5>
+
 		<div class="row">
 			<!-- Limelight -->
-			<div class="col l3 offset-l1">
+			<div class="col l3 s6 m6 offset-l1">
 				<div class="card">
 					<div class="card-image waves-effect waves-block waves-light portfolio-card">
 						<img class="activator responsive-img padded-image" src="static/img/limelightlogo.png">
@@ -205,7 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 			</div>
 			<!-- END OF Limelight -->
 			<!-- Food Truck -->
-			<div class="col l3 offset-l1">
+			<div class="col l3 s6 m6 offset-l1">
 				<div class="card">
 					<div class="card-image waves-effect waves-block waves-light portfolio-card portfolio-card">
 						<img class="activator responsive-img padded-image" src="static/img/foodtruck.jpg">
@@ -223,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 			</div>
 			<!-- END OF Food Truck -->
 			<!-- Froxxi -->
-			<div class="col l3 offset-l1">
+			<div class="col l3 s6 m6 offset-l1">
 				<div class="card">
 					<div class="card-image waves-effect waves-block waves-light portfolio-card">
 						<img class="activator responsive-img padded-image" src="static/img/froxxilogo.png">
@@ -235,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 						<h5 class=" card-title">Froxxi.com</h5>
 						<p class="">Froxxi is a discovery platform for people to find new fashion trends and take them to the point of purchase</p>
 						<p class="">Built with MongoDB, Express, Angular, Node.js, and Skeleton</p>
-						<a href="https://froxxi.com" target="_blank">Visit froxxi.com</a>					</div>
+						<a href="http://froxxi.com" target="_blank">Visit froxxi.com</a>					</div>
 					</div>
 				</div>
 				<!-- END OF Froxxi -->
@@ -258,24 +263,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- Tech partial -->
 <div id="ronindev_stacks" class="col s12">
+	<h2 class="Trivial center-align">Our Technologies</h2>
+	<h5 class="Lato center-align">We're able to build your application using the following technologies. Front-end technologies control what is displayed in your browser, while back-end technologies control how that information is stored. </h5>
 	<div class="row">
-		<h1 class="Trivial">Our Technologies</h1>
-		<div class="col s12 m12 l3 tech-column">
-			<h4 class="Trivial">Languages</h4>
+		<div class="col s12 m12 l3 tech-column z-depth-3">
+			<h5 class="Trivial">Languages</h5>
 			<img class="tech-logo" src="static/img/technologies/html5.png">
 			<img class="tech-logo" src="static/img/technologies/python.png">
 			<img class="tech-logo2" src="static/img/technologies/swiftlogo.png">
 		</div>
-		<div class="col s12 m12 l3 tech-column">
-			<h4 class="Trivial">Front-End</h4>
+		<div class="col s12 m12 l3 tech-column z-depth-3">
+			<h5 class="Trivial">Front-End</h5>
 			<img class="tech-logo2" src="static/img/technologies/materialize.png">
 			<img class="tech-logo2" src="static/img/technologies/react.png">
 			<img class="tech-logo" src="static/img/technologies/jquery.png">
 			<img class="tech-logo2" src="static/img/technologies/angular.png">
 			<img class="tech-logo" src="static/img/technologies/jslogo.png">
 		</div>
-		<div class="col s12 m12 l3 tech-column">
-			<h4 class="Trivial">Back-End</h4>
+		<div class="col s12 m12 l3 tech-column z-depth-3">
+			<h5 class="Trivial">Back-End</h5>
 			<img class="tech-logo" src="static/img/technologies/aws.png">
 			<img class="tech-logo" src="static/img/technologies/meanlogo.png">
 			<img class="tech-logo" src="static/img/technologies/mongologo.png">
@@ -283,8 +289,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 			<img class="tech-logo" src="static/img/technologies/mysql.png">
 			<img class="tech-logo" src="static/img/technologies/nodelogo.png">
 		</div>
-		<div class="col s12 m12 l3 tech-column">
-			<h4 class="Trivial">Frameworks</h4>
+		<div class="col s12 m12 l3 tech-column z-depth-3">
+			<h5 class="Trivial">Frameworks</h5>
 			<img class="tech-logo2" src="static/img/technologies/angular.png">
 			<img class="tech-logo" src="static/img/technologies/flask.png">
 		</div>
@@ -293,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- Contact Partial -->
 <div id="ronindev_contact" class="col s12">
 	<div class="container">
-		<h3 class="Trivial">Here is where we start</h3>
+		<h2 class="Trivial">Here is where we start</h2>
 		<div class="row">
 			<div class="col s12 m8 l8">
 				<div class="row">
