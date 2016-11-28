@@ -83,13 +83,17 @@ nav {
 
 .tech-column {
 	text-align: center;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
 }
 
 .tech-logo {
+	vertical-align: middle;
 	max-width: 9em;
 }
 
 .tech-logo2 {
+	vertical-align: middle;
 	max-width: 5em;
 }
 
