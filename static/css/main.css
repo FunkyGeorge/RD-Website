@@ -144,3 +144,10 @@ nav {
 .tech-card{
 	padding: 0em 1em 0em 1em;
 }
+
+#ronindev_portfolio .card-reveal p, a{
+	font-size: 18px;
+}
+#ronindev_portfolio .card-reveal h5{
+	font-size: 30px;
+}
