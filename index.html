@@ -50,8 +50,10 @@ $(document).ready(function(){
 	$('.card').hover(
 		function(){
 			$(this).children().children('.activator').click();
+			$(this).children('.activator').click();
 		}, function(){
 			$(this).children().children('.card-title').click();
+			$(this).children('.card-title').click();
 		}
 	);
 
@@ -309,38 +311,54 @@ $(document).ready(function(){
 	<div class="row">
 		<div class="col s12 m12 l3 tech-column">
 			<div class="card tech-card">
-				<h5 class="Trivial">Languages</h5>
+				<h5 class="Trivial activator">Languages</h5>
 				<img class="tech-logo" src="static/img/technologies/python.png">
 				<img class="tech-logo2" src="static/img/technologies/swiftlogo.png">
 				<img class="tech-logo" src="static/img/technologies/html5.png">
+				<div class="card-reveal">
+					<span class="card-title">Languages</span>
+					<p>Programming languages like HTML, Python, and Swift allow us to communicate instructions to the computer. These langauges are notations for writing programs, which are specifications of a computation or algorithm.</p>
+				</div>
 			</div>
 		</div>
 		<div class="col s12 m12 l3 tech-column">
 			<div class="card tech-card">
-				<h5 class="Trivial">Front-End</h5>
+				<h5 class="Trivial activator">Front-End</h5>
 				<img class="tech-logo2" src="static/img/technologies/materialize.png">
 				<img class="tech-logo2" src="static/img/technologies/react.png">
 				<img class="tech-logo2" src="static/img/technologies/angular.png">
 				<img class="tech-logo" src="static/img/technologies/jslogo.png">
 				<img class="tech-logo" src="static/img/technologies/jquery.png">
+				<div class="card-reveal">
+					<span class="card-title">Front-End</span>
+					<p>Front-End technologies are responsible for what the end-user sees. HTML, CSS, and Javascript are what the browser renders to display static and dynamic content in your browser. </p>
+				</div>
 			</div>
 		</div>
 		<div class="col s12 m12 l3 tech-column">
 			<div id="back-end-card" class="card">
-				<h5 class="Trivial">Back-End</h5>
+				<h5 class="Trivial activator">Back-End</h5>
 				<img class="tech-logo" src="static/img/technologies/aws.png">
 				<img class="tech-logo" src="static/img/technologies/meanlogo.png">
 				<img class="tech-logo" src="static/img/technologies/mongologo.png">
 				<img class="tech-logo" src="static/img/technologies/nginx.png">
 				<img class="tech-logo" src="static/img/technologies/nodelogo.png">
 				<img class="tech-logo" src="static/img/technologies/mysql.png">
+				<div class="card-reveal">
+					<span class="card-title">Back-End</span>
+					<p>Back-end technologies control information flow to and from your browser. These consist of servers and databases that return information to display in the browser. </p>
+				</div>
 			</div>
 		</div>
 		<div class="col s12 m12 l3 tech-column">
 			<div class="card tech-card">
-				<h5 class="Trivial">Frameworks</h5>
+				<h5 class="Trivial activator">Frameworks</h5>
 				<img class="tech-logo2" src="static/img/technologies/angular.png">
 				<img class="tech-logo" src="static/img/technologies/flask.png">
+				<div class="card-reveal">
+					<span class="card-title">Frameworks</span>
+					<p>Frameworks allow us to create applications faster since they are libraries of written and tested code. We can then apply these to your project to create a richer user experience. </p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -417,7 +435,7 @@ $(document).ready(function(){
 					<li><a class="grey-text text-lighten-3" href="http://twitter.com/ronindevteam" target="_blank"><img class="icon" src="static/img/socialicons/twitter.png"></a></li>
 					<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/ronindevteam/" target="_blank"><img class="icon" src="static/img/socialicons/instagram.png"></a></li>
 				</ul>
-					<span class="grey-text text-darken-2">© 2016 RONIN Dev</span>
+				<span class="grey-text text-darken-2">© 2016 RONIN Dev</span>
 			</div>
 		</div>
 	</div>
