@@ -140,3 +140,7 @@ nav {
 	vertical-align: middle;
 	display: inline-block;
 }
+
+.tech-card{
+	padding: 0em 1em 0em 1em;
+}

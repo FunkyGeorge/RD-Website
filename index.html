@@ -55,9 +55,11 @@ $(document).ready(function(){
 		}
 	);
 
+	//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
 	if($(window).width() < 993){
 		$("#contact-form-location").html("down below");
 	}
+	//
 
 	$('#contact').submit(function(){
 		var name = $('#name').val();
@@ -77,7 +79,6 @@ $(document).ready(function(){
 	});
 });
 $(window).resize(function () {
-	console.log("resized!");
 	var screen = $(window);
 	if (screen.width() < 993) {
 		$("#contact-form-location").html("down below");
@@ -85,6 +86,7 @@ $(window).resize(function () {
 	else {
 		$("#contact-form-location").html("on your right");
 	}
+	$(".tech-card").css("height", $("#back-end-card").css("height"));
 });
 </script>
 
@@ -276,37 +278,47 @@ $(window).resize(function () {
 </div> -->
 </div>
 <!-- Tech partial -->
-<div id="ronindev_stacks" class="col s12">
-	<h2 class="Trivial center-align">Our Technologies</h2>
-	<h5 class="Lato center-align">We're able to build your application using the following technologies. Front-end technologies control what is displayed in your browser, while back-end technologies control how that information is stored. </h5>
-	<div class="row">
-		<div class="col s12 m12 l3 tech-column z-depth-3">
-			<h5 class="Trivial">Languages</h5>
-			<img class="tech-logo" src="static/img/technologies/python.png">
-			<img class="tech-logo2" src="static/img/technologies/swiftlogo.png">
-			<img class="tech-logo" src="static/img/technologies/html5.png">
-		</div>
-		<div class="col s12 m12 l3 tech-column z-depth-3">
-			<h5 class="Trivial">Front-End</h5>
-			<img class="tech-logo2" src="static/img/technologies/materialize.png">
-			<img class="tech-logo2" src="static/img/technologies/react.png">
-			<img class="tech-logo2" src="static/img/technologies/angular.png">
-			<img class="tech-logo" src="static/img/technologies/jslogo.png">
-			<img class="tech-logo" src="static/img/technologies/jquery.png">
-		</div>
-		<div class="col s12 m12 l3 tech-column z-depth-3">
-			<h5 class="Trivial">Back-End</h5>
-			<img class="tech-logo" src="static/img/technologies/aws.png">
-			<img class="tech-logo" src="static/img/technologies/meanlogo.png">
-			<img class="tech-logo" src="static/img/technologies/mongologo.png">
-			<img class="tech-logo" src="static/img/technologies/nginx.png">
-			<img class="tech-logo" src="static/img/technologies/mysql.png">
-			<img class="tech-logo" src="static/img/technologies/nodelogo.png">
-		</div>
-		<div class="col s12 m12 l3 tech-column z-depth-3">
-			<h5 class="Trivial">Frameworks</h5>
-			<img class="tech-logo2" src="static/img/technologies/angular.png">
-			<img class="tech-logo" src="static/img/technologies/flask.png">
+<div class="container">
+	<div id="ronindev_stacks" class="col s12">
+		<h2 class="Trivial center-align">Our Technologies</h2>
+		<h5 class="Lato center-align">We're able to build your application using the following technologies. Front-end technologies control what is displayed in your browser, while back-end technologies control how that information is stored. </h5>
+		<div class="row">
+			<div class="col s12 m12 l3 tech-column">
+				<div class="card tech-card">
+					<h5 class="Trivial">Languages</h5>
+					<img class="tech-logo" src="static/img/technologies/python.png">
+					<img class="tech-logo2" src="static/img/technologies/swiftlogo.png">
+					<img class="tech-logo" src="static/img/technologies/html5.png">
+				</div>
+			</div>
+			<div class="col s12 m12 l3 tech-column">
+				<div class="card tech-card">
+					<h5 class="Trivial">Front-End</h5>
+					<img class="tech-logo2" src="static/img/technologies/materialize.png">
+					<img class="tech-logo2" src="static/img/technologies/react.png">
+					<img class="tech-logo2" src="static/img/technologies/angular.png">
+					<img class="tech-logo" src="static/img/technologies/jslogo.png">
+					<img class="tech-logo" src="static/img/technologies/jquery.png">
+				</div>
+			</div>
+			<div class="col s12 m12 l3 tech-column">
+				<div id="back-end-card" class="card">
+					<h5 class="Trivial">Back-End</h5>
+					<img class="tech-logo" src="static/img/technologies/aws.png">
+					<img class="tech-logo" src="static/img/technologies/meanlogo.png">
+					<img class="tech-logo" src="static/img/technologies/mongologo.png">
+					<img class="tech-logo" src="static/img/technologies/nginx.png">
+					<img class="tech-logo" src="static/img/technologies/nodelogo.png">
+					<img class="tech-logo" src="static/img/technologies/mysql.png">
+				</div>
+			</div>
+			<div class="col s12 m12 l3 tech-column">
+				<div class="card tech-card">
+					<h5 class="Trivial">Frameworks</h5>
+					<img class="tech-logo2" src="static/img/technologies/angular.png">
+					<img class="tech-logo" src="static/img/technologies/flask.png">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -390,6 +402,8 @@ $(window).resize(function () {
 		</div>
 	</div>
 </footer>
-
+<script type="text/javascript">
+$(".tech-card").css("height", $("#back-end-card").css("height"));
+</script>
 </body>
 </html>
