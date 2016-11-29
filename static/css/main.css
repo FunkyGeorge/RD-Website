@@ -106,7 +106,7 @@ nav {
 }
 
 .portfolio-card{
-	height: 20em;
+	height: auto;
 }
 
 .padded-image{

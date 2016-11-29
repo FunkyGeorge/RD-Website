@@ -66,6 +66,16 @@ $(document).ready(function(){
 			}
 			);
 
+	$("#our-clients-tab").click(
+		function(){
+			setTimeout(
+				function(){
+					$(".portfolio-card").css("height",$("#limelight-card").css("height"));
+				},
+				100);
+			}
+			);
+
 			//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
 			if($(window).width() < 993){
 				$("#contact-form-location").html("down below");
@@ -98,6 +108,7 @@ $(document).ready(function(){
 				$("#contact-form-location").html("on your right");
 			}
 			$(".tech-card").css("height", $("#back-end-card").css("height"));
+			$(".portfolio-card").css("height",$("#limelight-card").css("height"));
 		});
 		</script>
 
@@ -119,7 +130,7 @@ $(document).ready(function(){
 				<ul class="tabs tabs-transparent black-text">
 					<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
 					<li class="tab right"><a id="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
-					<li class="tab right"><a href="#ronindev_portfolio">Our Clients</a></li>
+					<li class="tab right"><a id="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
 					<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
 				</ul>
 			</div>
@@ -221,7 +232,7 @@ $(document).ready(function(){
 				<!-- Limelight -->
 				<div class="col l3 s6 m6 offset-l1">
 					<div class="card">
-						<div class="card-image waves-effect waves-block waves-light portfolio-card">
+						<div id="limelight-card" class="card-image waves-effect waves-block waves-light">
 							<img class="activator responsive-img padded-image" src="static/img/limelightlogo.png">
 						</div>
 						<div class="card-content center-align">
