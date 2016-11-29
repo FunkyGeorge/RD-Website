@@ -6,7 +6,7 @@
 	<link rel="favicon" href="static/img/favicon.ico">
 	<link rel="icon" href="static/img/favicon.ico" type="image/x-icon"/>
 	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 	<!-- Materialize -->
 	<link rel="stylesheet" type="text/css" href="static/css/materialize.css">
 	<script src="static/js/materialize.js" charset="utf-8"></script>
@@ -55,232 +55,243 @@ $(document).ready(function(){
 		}
 	);
 
-	//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
-	if($(window).width() < 993){
-		$("#contact-form-location").html("down below");
-	}
-	//
 
-	$('#contact').submit(function(){
-		var name = $('#name').val();
-		var callback = $('#email').val();
-		var project = $('#project').val();
+	$("#our-tech-tab").click(
+		function(){
+			setTimeout(
+				function(){
+					$(".tech-card").css("height",$("#back-end-card").css("height"));
+				},
+				100);
+			}
+			);
 
-		if (callback.length > 0 && name.length > 0 && project.length > 0){
-			var email = "";   //Enter Email Here
-			var subject = name + " wants to talk about their project";
-			var body = "Hello Ronin Dev Team,\n\n " +
-			"I would like to have a project built, " +
-			project +
-			"\n\nThank You,\n" + `${name}\n` + callback;
-			document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
-		}
-		return false;
-	});
-});
-$(window).resize(function () {
-	var screen = $(window);
-	if (screen.width() < 993) {
-		$("#contact-form-location").html("down below");
-	}
-	else {
-		$("#contact-form-location").html("on your right");
-	}
-	$(".tech-card").css("height", $("#back-end-card").css("height"));
-});
-</script>
+			//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
+			if($(window).width() < 993){
+				$("#contact-form-location").html("down below");
+			}
+			//
 
-</head>
-<body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6DKCC6"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-	<!-- End Google Tag Manager (noscript) -->
+			$('#contact').submit(function(){
+				var name = $('#name').val();
+				var callback = $('#email').val();
+				var project = $('#project').val();
+
+				if (callback.length > 0 && name.length > 0 && project.length > 0){
+					var email = "";   //Enter Email Here
+					var subject = name + " wants to talk about their project";
+					var body = "Hello Ronin Dev Team,\n\n " +
+					"I would like to have a project built, " +
+					project +
+					"\n\nThank You,\n" + `${name}\n` + callback;
+					document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
+				}
+				return false;
+			});
+		});
+		$(window).resize(function () {
+			var screen = $(window);
+			if (screen.width() < 993) {
+				$("#contact-form-location").html("down below");
+			}
+			else {
+				$("#contact-form-location").html("on your right");
+			}
+			$(".tech-card").css("height", $("#back-end-card").css("height"));
+		});
+		</script>
+
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6DKCC6"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
 
-	<!-- Navbar -->
-	<nav class="nav-extended black">
-		<div class="nav-wrapper">
-			<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="hide-on-med-and-down Lato">Web and Mobile App Dev Team</span></a>
+		<!-- Navbar -->
+		<nav class="nav-extended black">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="hide-on-med-and-down Lato">Web and Mobile App Dev Team</span></a>
 
-			<ul class="tabs tabs-transparent black-text">
-				<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
-				<li class="tab right"><a href="#ronindev_stacks">Our Tech</a></li>
-				<li class="tab right"><a href="#ronindev_portfolio">Our Clients</a></li>
-				<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
-			</ul>
+				<ul class="tabs tabs-transparent black-text">
+					<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
+					<li class="tab right"><a id="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
+					<li class="tab right"><a href="#ronindev_portfolio">Our Clients</a></li>
+					<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- index partial -->
+		<div id="ronindev_index" class="col s12">
+			<h2 class="Lato center-align">Our Team</h2>
+			<h5 class="Lato center-align">We are a full stack development team for hire</h5>
+			<div class="row">
+				<div class="col s6 m6 l3">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="static/img/sonny_resized.png">
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<div class="card-title college-box">
+								<img class="college" src="static/img/misc/usma.png">
+							</div>
+							<h5>Sonny Tosco</h5>
+							<h6>Role: Product Guy</h6>
+							<div class="spacer"></div>
+
+							<h6 class="">Follow Me</h6>
+							<a href="https://www.linkedin.com/in/sonnytosco" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+							<a href="https://github.com/SonnyTosco" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+							<a href="http://Sonnytosco.com" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s6 m6 l3">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="static/img/phil_resized.png">
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<div class="card-title college-box">
+								<img class="college" src="static/img/misc/davis.png">
+							</div>
+							<h5 class="">Phil Vo</h5>
+							<h6 class="">Role: Back End Boss</h6>
+							<div class="spacer"></div>
+							<h6 class="">Follow Me</h6>
+							<a href="https://www.linkedin.com/in/philipvo" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+							<a href="https://github.com/PhilipVo" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+							<a href="http://philipvo.github.io" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s6 m6 l3">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="static/img/elliot_resized.png">
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<div class="card-title college-box">
+								<img class="college" src="static/img/misc/davis.png">
+							</div>
+							<h5 class="">Elliot Young</h5>
+							<h6 class="">Role: Front-End Engineer</h6>
+							<div class="spacer"></div>
+							<h6 class="">Follow Me</h6>
+							<a href="https://www.linkedin.com/in/elliot-young-5768199a" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+							<a href="https://github.com/elliotsyoung" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+							<a href="" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s6 m6 l3">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="static/img/george_resized.png">
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<div class="card-title college-box">
+								<img id="modestojc-box" src="static/img/misc/mjc.png">
+							</div>
+							<h5 class="">George Miranda</h5>
+							<h6 class="">Role: Front-End Funkmaster</h6>
+							<div class="spacer"></div>
+							<h6 class="">Follow Me</h6>
+							<a href="https://www.linkedin.com/in/george-miranda-462a47114" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
+							<a href="https://github.com/FunkyGeorge" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
+							<a href="http://Aboutgeorge.net" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</nav>
-	<!-- index partial -->
-	<div id="ronindev_index" class="col s12">
-		<h2 class="Trivial center-align">Our Team</h2>
-		<h5 class="Lato center-align">We are a full stack development team for hire</h5>
-		<div class="row">
-			<div class="col s6 m6 l3">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="static/img/sonny_resized.png">
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<div class="card-title college-box">
-							<img class="college" src="static/img/misc/usma.png">
+		<!-- Portfolio partial -->
+		<div id="ronindev_portfolio" class="col s12">
+			<!-- Portfolio Row -->
+			<h2 class="Lato center-align">Our Clients</h2>
+			<h5 class="Lato center-align">Here are some applications we've built</h5>
+
+			<div class="row">
+				<!-- Limelight -->
+				<div class="col l3 s6 m6 offset-l1">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light portfolio-card">
+							<img class="activator responsive-img padded-image" src="static/img/limelightlogo.png">
 						</div>
-						<h5>Sonny Tosco</h5>
-						<h6>Role: Product Guy</h6>
-						<div class="spacer"></div>
-
-						<h6 class="">Follow Me</h6>
-						<a href="https://www.linkedin.com/in/sonnytosco" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
-						<a href="https://github.com/SonnyTosco" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
-						<a href="http://Sonnytosco.com" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col s6 m6 l3">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="static/img/phil_resized.png">
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<div class="card-title college-box">
-							<img class="college" src="static/img/misc/davis.png">
+						<div class="card-content center-align">
+							<span class="card-title">Limelight</span>
 						</div>
-						<h5 class="">Phil Vo</h5>
-						<h6 class="">Role: Back End Boss</h6>
-						<div class="spacer"></div>
-						<h6 class="">Follow Me</h6>
-						<a href="https://www.linkedin.com/in/philipvo" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
-						<a href="https://github.com/PhilipVo" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
-						<a href="http://philipvo.github.io" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col s6 m6 l3">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="static/img/elliot_resized.png">
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<div class="card-title college-box">
-							<img class="college" src="static/img/misc/davis.png">
+						<div class="card-reveal black-text white clear-background">
+							<h5 class=" card-title ">Limelight</h5>
+							<p class=" ">Limelight is a social app that allows users to request a photo from users on a map to see what's happening now at that location</p>
+							<p class=" ">Built with Obj-C, MongoDB, Express, Node.js</p>
+							<a class="" href="https://itunes.apple.com/us/app/limelight-location-based-media/id966011551?mt=8" target="_blank">See Limelight in the app store</a>
 						</div>
-						<h5 class="">Elliot Young</h5>
-						<h6 class="">Role: Front-End Engineer</h6>
-						<div class="spacer"></div>
-						<h6 class="">Follow Me</h6>
-						<a href="https://www.linkedin.com/in/elliot-young-5768199a" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
-						<a href="https://github.com/elliotsyoung" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
-						<a href="" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
 					</div>
 				</div>
-			</div>
-
-			<div class="col s6 m6 l3">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="static/img/george_resized.png">
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<div class="card-title college-box">
-							<img id="modestojc-box" src="static/img/misc/mjc.png">
+				<!-- END OF Limelight -->
+				<!-- Food Truck -->
+				<div class="col l3 s6 m6 offset-l1">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light portfolio-card portfolio-card">
+							<img class="activator responsive-img padded-image" src="static/img/foodtruck.jpg">
 						</div>
-						<h5 class="">George Miranda</h5>
-						<h6 class="">Role: Front-End Funkmaster</h6>
-						<div class="spacer"></div>
-						<h6 class="">Follow Me</h6>
-						<a href="https://www.linkedin.com/in/george-miranda-462a47114" target="_blank"><img class="icon" src="static/img/socialicons/linkedin.png"></a>
-						<a href="https://github.com/FunkyGeorge" target="_blank"><img class="icon" src="static/img/socialicons/39062.png"></a>
-						<a href="http://Aboutgeorge.net" target="_blank"><img class="icon" src="static/img/socialicons/logo_transparent_background.png"></a>
+						<div class="card-content center-align">
+							<span class="card-title">FoodTrucks</span>
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<h5 class=" card-title">FoodTruck</h5>
+							<p class="">Foodtrucks is an app that can locate trucks in San Francisco and plan when you would like to eat there.</p>
+							<p class="">Built with Python, MySQL, Google Maps API</p>
+							<a href="http://foodtrucks.zaks.pw/" target="_blank">Visit foodtrucks</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio partial -->
-	<div id="ronindev_portfolio" class="col s12">
-		<!-- Portfolio Row -->
-		<h2 class="Trivial center-align">Our Clients</h2>
-		<h5 class="Lato center-align">Here are some applications we've built</h5>
+				<!-- END OF Food Truck -->
+				<!-- Froxxi -->
+				<div class="col l3 s6 m6 offset-l1">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light portfolio-card">
+							<img class="activator responsive-img padded-image" src="static/img/froxxilogo.png">
+						</div>
+						<div class="card-content center-align">
+							<span class="card-title">Froxxi.com</span>
+						</div>
+						<div class="card-reveal black-text white clear-background">
+							<h5 class=" card-title">Froxxi.com</h5>
+							<p class="">Froxxi is a discovery platform for people to find new fashion trends and take them to the point of purchase</p>
+							<p class="">Built with MongoDB, Express, Angular, Node.js, and Skeleton</p>
+							<a href="http://froxxi.com" target="_blank">Visit froxxi.com</a>					</div>
+						</div>
+					</div>
+					<!-- END OF Froxxi -->
 
-		<div class="row">
-			<!-- Limelight -->
-			<div class="col l3 s6 m6 offset-l1">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light portfolio-card">
-						<img class="activator responsive-img padded-image" src="static/img/limelightlogo.png">
-					</div>
-					<div class="card-content center-align">
-						<span class="card-title">Limelight</span>
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<h5 class=" card-title ">Limelight</h5>
-						<p class=" ">Limelight is a social app that allows users to request a photo from users on a map to see what's happening now at that location</p>
-						<p class=" ">Built with Obj-C, MongoDB, Express, Node.js</p>
-						<a class="" href="https://itunes.apple.com/us/app/limelight-location-based-media/id966011551?mt=8" target="_blank">See Limelight in the app store</a>
-					</div>
+
 				</div>
-			</div>
-			<!-- END OF Limelight -->
-			<!-- Food Truck -->
-			<div class="col l3 s6 m6 offset-l1">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light portfolio-card portfolio-card">
-						<img class="activator responsive-img padded-image" src="static/img/foodtruck.jpg">
-					</div>
-					<div class="card-content center-align">
-						<span class="card-title">FoodTrucks</span>
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<h5 class=" card-title">FoodTruck</h5>
-						<p class="">Foodtrucks is an app that can locate trucks in San Francisco and plan when you would like to eat there.</p>
-						<p class="">Built with Python, MySQL, Google Maps API</p>
-						<a href="http://foodtrucks.zaks.pw/" target="_blank">Visit foodtrucks</a>
-					</div>
-				</div>
-			</div>
-			<!-- END OF Food Truck -->
-			<!-- Froxxi -->
-			<div class="col l3 s6 m6 offset-l1">
-				<div class="card">
-					<div class="card-image waves-effect waves-block waves-light portfolio-card">
-						<img class="activator responsive-img padded-image" src="static/img/froxxilogo.png">
-					</div>
-					<div class="card-content center-align">
-						<span class="card-title">Froxxi.com</span>
-					</div>
-					<div class="card-reveal black-text white clear-background">
-						<h5 class=" card-title">Froxxi.com</h5>
-						<p class="">Froxxi is a discovery platform for people to find new fashion trends and take them to the point of purchase</p>
-						<p class="">Built with MongoDB, Express, Angular, Node.js, and Skeleton</p>
-						<a href="http://froxxi.com" target="_blank">Visit froxxi.com</a>					</div>
-					</div>
-				</div>
-				<!-- END OF Froxxi -->
 
-
+				<!-- template for adding a new row of projects -->
+				<!-- <div class="row">
+				<div class="col l3">
+				<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
 			</div>
-
-			<!-- template for adding a new row of projects -->
-			<!-- <div class="row">
-			<div class="col l3">
+			<div class="col l3 offset-l1">
 			<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
 		</div>
 		<div class="col l3 offset-l1">
 		<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
 	</div>
-	<div class="col l3 offset-l1">
-	<a href=""><img class="responsive-img" src="http://placehold.it/400x300"></a>
-</div>
 </div> -->
 </div>
 <!-- Tech partial -->
 <div class="container">
 	<div id="ronindev_stacks" class="col s12">
-		<h2 class="Trivial center-align">Our Technologies</h2>
+		<h2 class="Lato center-align">Our Technologies</h2>
 		<h5 class="Lato center-align">We're able to build your application using the following technologies. Front-end technologies control what is displayed in your browser, while back-end technologies control how that information is stored. </h5>
 		<div class="row">
 			<div class="col s12 m12 l3 tech-column">
@@ -325,7 +336,7 @@ $(window).resize(function () {
 <!-- Contact Partial -->
 <div id="ronindev_contact" class="col s12">
 	<div class="container">
-		<h2 class="Trivial">Here is where we start</h2>
+		<h2 class="Lato">Here is where we start</h2>
 		<div class="row">
 			<div class="col s12 m12 l8">
 				<div class="row">
@@ -402,8 +413,6 @@ $(window).resize(function () {
 		</div>
 	</div>
 </footer>
-<script type="text/javascript">
-$(".tech-card").css("height", $("#back-end-card").css("height"));
 </script>
 </body>
 </html>
