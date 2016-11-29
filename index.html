@@ -50,24 +50,26 @@ $(document).ready(function(){
 	$('.card').hover(
 		function(){
 			$(this).children().children('.activator').click();
-			$(this).children('.activator').click();
+			$(this).children('.activator').click(); //for the tech page since the activator is only 1 element deep
 		}, function(){
 			$(this).children().children('.card-title').click();
-			$(this).children('.card-title').click();
+			$(this).children('.card-title').click(); //for the tech page since the activator is only 1 element deep
 		}
 	);
 
 
+	//When they click the tech tab, the columns for the cards adjust to the back-end card's height (since that one has the most logos and will always have the greatest height)
 	$("#our-tech-tab").click(
 		function(){
 			setTimeout(
 				function(){
-					$(".tech-card").css("height",$("#back-end-card").css("height"));
+					$(".tech-card").css("height",$("#back-end-card-reveal").css("height"));
+					$("#back-end-card").css("height",$("#back-end-card-reveal").css("height"));
 				},
 				100);
 			}
 		);
-
+		//see comment for our-tech-tab
 		$("#our-clients-tab").click(
 			function(){
 				setTimeout(
@@ -344,7 +346,7 @@ $(document).ready(function(){
 				<img class="tech-logo" src="static/img/technologies/nginx.png">
 				<img class="tech-logo" src="static/img/technologies/nodelogo.png">
 				<img class="tech-logo" src="static/img/technologies/mysql.png">
-				<div class="card-reveal">
+				<div id="back-end-card-reveal" class="card-reveal">
 					<span class="card-title">Back-End</span>
 					<p class="">Back-end technologies control information flow to and from your browser. These consist of servers and databases that return information to display in the browser. </p>
 				</div>
