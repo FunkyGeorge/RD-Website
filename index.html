@@ -83,6 +83,8 @@ $(document).ready(function(){
 			//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
 			if($(window).width() < 993){
 				$("#contact-form-location").html("down below");
+				$("#navbar-mobile").css("display","block");
+				$("#navbar-desktop").css("display", "none");
 			}
 			//
 
@@ -107,9 +109,13 @@ $(document).ready(function(){
 			var screen = $(window);
 			if (screen.width() < 993) {
 				$("#contact-form-location").html("down below");
+				$("#navbar-mobile").css("display","block");
+				$("#navbar-desktop").css("display", "none");
 			}
 			else {
 				$("#contact-form-location").html("on your right");
+				$("#navbar-mobile").css("display","none");
+				$("#navbar-desktop").css("display", "block");
 			}
 			$(".tech-card").css("height", $("#back-end-card").css("height"));
 			$(".portfolio-card").css("height",$("#limelight-card").css("height"));
@@ -128,9 +134,8 @@ $(document).ready(function(){
 
 		<!-- Navbar -->
 		<nav class="nav-extended black">
-			<div class="nav-wrapper">
-				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="hide-on-med-and-down Lato">Web and Mobile App Dev Team</span></a>
-
+			<div id="navbar-desktop" class="nav-wrapper">
+				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="Lato">Web and Mobile App Dev Team</span></a>
 				<ul class="tabs tabs-transparent black-text">
 					<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
 					<li class="tab right"><a id="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
@@ -138,7 +143,19 @@ $(document).ready(function(){
 					<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
 				</ul>
 			</div>
+
+			<div id="navbar-mobile" class="nav-wrapper">
+				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"></a>
+				<ul class="valign-wrapper tabs tabs-transparent black-text">
+					<li class="valign tab"><a class="active" href="#ronindev_index">Our Team</a></li>
+					<li class="valign tab"><a id="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
+					<li class="valign tab"><a id="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
+					<li class="valign tab"><a href="#ronindev_contact">Let's Talk</a></li>
+				</ul>
+			</div>
 		</nav>
+
+
 		<!-- index partial -->
 		<div id="ronindev_index" class="col s12">
 			<h2 class="Lato center-align">Our Team</h2>
@@ -243,7 +260,7 @@ $(document).ready(function(){
 						</div>
 						<div class="card-reveal black-text white clear-background">
 							<h5 class=" card-title ">Limelight</h5>
-							<p class="flow-text">Limelight is a social app that allows users to request a photo from users on a map to see what's happening now at that location</p>
+							<p class="">Limelight is a social app that allows users to request a photo from users on a map to see what's happening now at that location</p>
 							<p class=" ">Built with Obj-C, MongoDB, Express, Node.js</p>
 							<a class="" href="https://itunes.apple.com/us/app/limelight-location-based-media/id966011551?mt=8" target="_blank">See Limelight in the app store</a>
 						</div>

@@ -151,3 +151,8 @@ nav {
 #ronindev_portfolio .card-reveal h5{
 	font-size: 30px;
 }
+
+#navbar-mobile  {
+	padding: 3em 0em;
+	display: none;
+}
