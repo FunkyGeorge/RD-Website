@@ -43,6 +43,12 @@ nav {
 	width: 1em;
 }
 
+#Logo-mobile{
+	width: 2em;
+	position: relative;
+	top: -1em;
+}
+
 #Logo-box {
 	padding: 3em;
 	max-height: 5em;
@@ -58,11 +64,11 @@ nav {
 }
 
 .college {
-	width: 4em;
+	width: 5em;
 }
 
 #modestojc-box{
-	width: 6em;
+	width: 9em;
 }
 
 .college-box {
@@ -106,7 +112,7 @@ nav {
 }
 
 .portfolio-card{
-	height: 21em;
+	height: auto;
 }
 
 .padded-image{
@@ -139,4 +145,20 @@ nav {
 .contact-icon-and-text{
 	vertical-align: middle;
 	display: inline-block;
+}
+
+.tech-card{
+	padding: 0em 1em 0em 1em;
+}
+
+#ronindev_portfolio .card-reveal p, a{
+	font-size: 18px;
+}
+#ronindev_portfolio .card-reveal h5{
+	font-size: 30px;
+}
+
+#navbar-mobile  {
+	padding: 3em 0em;
+	display: none;
 }
