@@ -47,7 +47,6 @@
 <!-- End Google Tag Manager -->
 <script type="text/javascript">
 $(document).ready(function(){
-	$('.scrollspy').scrollspy();
 	$('.card').hover(
 		function(){
 			$(this).children().children('.activator').click();
@@ -56,7 +55,6 @@ $(document).ready(function(){
 			$(this).children().children('.card-title').click();
 			$(this).children('.card-title').click(); //for the tech page since the activator is only 1 element deep
 		}
-
 	);
 
 
@@ -134,14 +132,12 @@ $(document).ready(function(){
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-<div class="navbar-fixed">
-
 
 		<!-- Navbar -->
 		<nav class="nav-extended black">
 			<div id="navbar-desktop" class="nav-wrapper">
 				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="Lato">Web and Mobile App Dev Team</span></a>
-				<ul class="tabs tabs-transparent black-text section table-of-contents">
+				<ul class="tabs tabs-transparent black-text">
 					<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
 					<li class="tab right"><a class="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
 					<li class="tab right"><a class="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
@@ -159,11 +155,10 @@ $(document).ready(function(){
 		</ul>
 	</div> -->
 </nav>
-</div>
+
 
 <!-- index partial -->
-<div id="ronindev_stacks" class="col s12 section scrollspy">
-	<!-- <a name="ronindev_stacks"></a> -->
+<div id="ronindev_index" class="col s12">
 	<h2 class="Lato center-align">Our Team</h2>
 	<h5 class="Lato center-align">We are a full stack development team for hire</h5>
 	<div class="row">
@@ -248,10 +243,9 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div>
-</div
-
+</div>
 <!-- Portfolio partial -->
-<div id="" class="col s12">
+<div id="ronindev_portfolio" class="col s12">
 	<!-- Portfolio Row -->
 	<h2 class="Lato center-align">Our Clients</h2>
 	<h5 class="Lato center-align">Here are some applications we've built</h5>
@@ -329,7 +323,7 @@ $(document).ready(function(){
 </div>
 <!-- Tech partial -->
 <!-- <div class="container"> -->
-<div id="ronindev_stacks" class="col s12 section scrollspy">
+<div id="ronindev_stacks" class="col s12">
 	<h2 class="Lato center-align">Our Technologies</h2>
 	<div class="container">
 		<h5 class="Lato center-align">We're able to build your application using the following technologies. Front-end technologies control what is displayed in your browser, while back-end technologies control how that information is stored. </h5>
@@ -391,7 +385,7 @@ $(document).ready(function(){
 </div>
 <!-- </div> <!-- End of container -->
 <!-- Contact Partial -->
-<div id="" class="col s12">
+<div id="ronindev_contact" class="col s12">
 	<div class="container">
 		<h2 class="Lato">Here is where we start</h2>
 		<div class="row">
