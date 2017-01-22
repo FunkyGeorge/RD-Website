@@ -37,93 +37,8 @@
 
 	<!-- ###################################################### -->
 	<!-- Google Tag Manager -->
-	<script>
-	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N6DKCC6');
-</script>
-<!-- End Google Tag Manager -->
-<script type="text/javascript">
-$(document).ready(function(){
-	$('.scrollspy').scrollspy();
-	$('.card').hover(
-		function(){
-			$(this).children().children('.activator').click();
-			$(this).children('.activator').click(); //for the tech page since the activator is only 1 element deep
-		}, function(){
-			$(this).children().children('.card-title').click();
-			$(this).children('.card-title').click(); //for the tech page since the activator is only 1 element deep
-		}
-
-	);
-
-
-	//When they click the tech tab, the columns for the cards adjust to the back-end card's height (since that one has the most logos and will always have the greatest height)
-	$(".our-tech-tab").click(
-		function(){
-			setTimeout(
-				function(){
-					$(".tech-card").css("height",$("#back-end-card-reveal").css("height"));
-					$("#back-end-card").css("height",$("#back-end-card-reveal").css("height"));
-				},
-				100);
-			}
-		);
-		//see comment for our-tech-tab
-		$(".our-clients-tab").click(
-			function(){
-				setTimeout(
-					function(){
-						console.log("you clicked this tab");
-						$(".portfolio-card").css("height",$("#limelight-card").css("height"));
-					},
-					100);
-				}
-			);
-
-			//initial setup for tech stacks page. We want all the cards to be the same height as the largest one.
-			if($(window).width() < 993){
-				$("#contact-form-location").html("down below");
-				$("#navbar-mobile").css("display","block");
-				$("#navbar-desktop").css("display", "none");
-			}
-			//
-
-			$('#contact').submit(function(){
-				var name = $('#name').val();
-				var callback = $('#email').val();
-				var project = $('#project').val();
-
-				if (callback.length > 0 && name.length > 0 && project.length > 0){
-					var email = "sonny.tosco@gmail.com";   //Enter Email Here
-					var subject = name + " wants to talk about their project";
-					var body = "Hello Ronin Dev Team,\n\n " +
-					"I would like to have a project built, " +
-					project +
-					"\n\nThank You,\n" + `${name}\n` + callback;
-					document.location=`mailto:${email}?subject=${subject}&body=` + encodeURIComponent(body);
-				}
-				return false;
-			});
-		});
-		$(window).resize(function () {
-			var screen = $(window);
-			if (screen.width() < 993) {
-				$("#contact-form-location").html("down below");
-				$("#navbar-mobile").css("display","block");
-				$("#navbar-desktop").css("display", "none");
-			}
-			else {
-				$("#contact-form-location").html("on your right");
-				$("#navbar-mobile").css("display","none");
-				$("#navbar-desktop").css("display", "block");
-			}
-			$(".tech-card").css("height", $("#back-end-card").css("height"));
-			$(".portfolio-card").css("height",$("#limelight-card").css("height"));
-		});
-		</script>
+	<script src="static/js/googleAnalytics.js"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
 
 	</head>
 	<body>
@@ -134,36 +49,35 @@ $(document).ready(function(){
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-<div class="navbar-fixed">
-
 
 		<!-- Navbar -->
-		<nav class="nav-extended black">
-			<div id="navbar-desktop" class="nav-wrapper">
-				<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="Lato">Web and Mobile App Dev Team</span></a>
-				<ul class="tabs tabs-transparent black-text section table-of-contents">
-					<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
-					<li class="tab right"><a class="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
-					<li class="tab right"><a class="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
-					<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
-				</ul>
-			</div>
+		<div class="navbar-fixed">
+			<nav class="nav-extended black">
+				<div id="navbar-desktop" class="nav-wrapper">
+					<a href="#" class="brand-logo"><img id="Logo" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"><span id="Copy" class="Lato">Web and Mobile App Dev Team</span></a>
+					<ul class="black-text section table-of-contents tabs-transparent">
+						<li class="tab right"><a href="#ronindev_contact">Let's Talk</a></li>
+						<li class="tab right"><a class="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
+						<li class="tab right"><a class="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
+						<li class="tab right"><a class="active" href="#ronindev_index">Our Team</a></li>
+					</ul>
+				</div>
 
-			<!-- <div id="navbar-mobile" class="nav-wrapper">
-			<a href="#" class="brand-logo"><img id="Logo-mobile" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"></a>
-			<ul class="valign-wrapper tabs tabs-transparent black-text">
-			<li class="valign tab"><a class="active" href="#ronindev_index">Our Team</a></li>
-			<li class="valign tab"><a class="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
-			<li class="valign tab"><a class="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
-			<li class="valign tab"><a href="#ronindev_contact">Let's Talk</a></li>
-		</ul>
-	</div> -->
-</nav>
-</div>
+				<!-- <div id="navbar-mobile" class="nav-wrapper">
+				<a href="#" class="brand-logo"><img id="Logo-mobile" class="responsive-img" src="static/img/logos/white_logo_transparent_background.png" alt="oops!"></a>
+				<ul class="valign-wrapper tabs tabs-transparent black-text">
+				<li class="valign tab"><a class="active" href="#ronindev_index">Our Team</a></li>
+				<li class="valign tab"><a class="our-clients-tab" href="#ronindev_portfolio">Our Clients</a></li>
+				<li class="valign tab"><a class="our-tech-tab" href="#ronindev_stacks">Our Tech</a></li>
+				<li class="valign tab"><a href="#ronindev_contact">Let's Talk</a></li>
+			</ul>
+		</div> -->
+			</nav>
+		</div>
+
 
 <!-- index partial -->
-<div id="ronindev_stacks" class="col s12 section scrollspy">
-	<!-- <a name="ronindev_stacks"></a> -->
+<div id="ronindev_index" class="col s12 section scrollspy">
 	<h2 class="Lato center-align">Our Team</h2>
 	<h5 class="Lato center-align">We are a full stack development team for hire</h5>
 	<div class="row">
@@ -248,10 +162,9 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div>
-</div
-
+</div>
 <!-- Portfolio partial -->
-<div id="" class="col s12">
+<div id="ronindev_portfolio" class="col s12 section scrollspy">
 	<!-- Portfolio Row -->
 	<h2 class="Lato center-align">Our Clients</h2>
 	<h5 class="Lato center-align">Here are some applications we've built</h5>
@@ -355,7 +268,6 @@ $(document).ready(function(){
 				<img class="tech-logo2" src="static/img/technologies/angular.png">
 				<img class="tech-logo" src="static/img/technologies/jslogo.png">
 				<img class="tech-logo" src="static/img/technologies/jquery.png">
-				<img class="tech-logo2" src="static/img/technologies/bootstrap.png">
 				<div class="card-reveal">
 					<span class="card-title">Front-End</span>
 					<p class="">Front-End technologies are responsible for what the end-user sees. HTML, CSS, and Javascript are what the browser renders to display static and dynamic content in your browser. </p>
@@ -381,7 +293,6 @@ $(document).ready(function(){
 			<div class="card tech-card">
 				<h5 class="Lato activator">Frameworks</h5>
 				<img class="tech-logo2" src="static/img/technologies/angular.png">
-				<img class="tech-logo2" src="static/img/technologies/iOS.png">
 				<img class="tech-logo" src="static/img/technologies/flask.png">
 				<div class="card-reveal">
 					<span class="card-title">Frameworks</span>
@@ -391,9 +302,9 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
-<!-- </div> <!-- End of container -->
+<!-- </div>  End of container -->
 <!-- Contact Partial -->
-<div id="" class="col s12">
+<div id="ronindev_contact" class="col s12 section scrollspy">
 	<div class="container">
 		<h2 class="Lato">Here is where we start</h2>
 		<div class="row">
